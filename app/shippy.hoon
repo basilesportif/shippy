@@ -45,19 +45,9 @@ $:  [%0 val=@ud]
     ?+    mark  (on-poke:def mark vase)
         %handle-http-request
       =+  !<([id=@ta =inbound-request:eyre] vase)
-      :_  state
-      %+  give-simple-payload:app:srv  id
-      %+  require-authorization:app:srv  inbound-request
-      handle-http-request
+      `state
     ==
   [cards this]
-  ::
-  ++  handle-http-request
-    |=  req=inbound-request:eyre
-    ^-  simple-payload:http
-    %-  json-response:gen:srv
-    %-  json-to-octs:srv
-    ship-info
   ::
   ++  ship-info
     ^-  json
