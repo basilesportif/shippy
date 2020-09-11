@@ -36,7 +36,7 @@ $:  [%0 val=@ud]
   ^-  (quip card _this)
   ~&  >  '%shippy disabled successfully'
   :_  this
-  ~[[%pass /bind %arvo %e %disconnect [~ /'~/shippy']]]
+  ~[[%pass /bind %arvo %e %disconnect [~ /'~shippy']]]
 ++  on-poke   on-poke:def
 ++  on-watch  on-watch:def
 ++  on-leave  on-leave:def
